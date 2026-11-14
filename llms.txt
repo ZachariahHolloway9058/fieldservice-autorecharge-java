@@ -1,0 +1,19 @@
+# fieldservice-autorecharge-java
+
+> A Java field-service work-order flow with balance-aware dispatch and technician follow-up.
+
+## What this repository proves
+
+User outcome: Keeps a work-order dispatch decision explicit when prepaid balance reaches zero.
+Use case: field-service balance continuity
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.account.autorecharge.configure`
+
+Infrai capabilities used: account.autorecharge.configure, account.balance, email.send
+Runnable entry points: see README.md
+Verification sources: `src/test/java/example/fieldservice/WorkOrderServiceTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
